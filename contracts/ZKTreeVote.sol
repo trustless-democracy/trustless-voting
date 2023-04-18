@@ -21,16 +21,10 @@ contract ZKTreeVote is ZKTree {
         for (uint i = 0; i <= numOptions; i++) optionCounter[i] = 0;
     }
 
-    function registerValidator(address _validator) external {
-        require(msg.sender == owner, "Only owner can add validator!");
-        validators[_validator] = true;
-    }
-
     function registerCommitment(
         uint256 _uniqueHash,
         uint256 _commitment
     ) external {
-        require(validators[msg.sender], "Only validator can commit!");
         require(
             !uniqueHashes[_uniqueHash],
             "This unique hash is already used!"

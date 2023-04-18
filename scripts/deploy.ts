@@ -20,7 +20,7 @@ async function main() {
     console.log(`ZKTreeVote address: ${zktreevote.address}`)
 
     // add the 2nd hardhat account as a validator
-    await zktreevote.registerValidator(signers[1].address)
+    // await zktreevote.registerValidator(signers[1].address)
 
     fs.writeFileSync("static/contracts.json", JSON.stringify({
         mimc: mimcsponge.address,

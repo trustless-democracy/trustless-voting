@@ -25,7 +25,6 @@ describe("ZKTree Smart contract test", () => {
 
     it("Test the full process", async () => {
         const signers = await ethers.getSigners()
-        await zktreevote.registerValidator(signers[1].address)
 
         // register 3 voters
         const commitment1 = await generateCommitment()
