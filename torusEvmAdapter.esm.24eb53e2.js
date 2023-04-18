@@ -3801,8 +3801,8 @@ exports.PassThrough = require("eb983c60326fbbed");
 // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
-var process = require("7c5b6b4238b509c2");
 var global = arguments[3];
+var process = require("7c5b6b4238b509c2");
 "use strict";
 /*<replacement>*/ var pna = require("5626d10fa95c371a");
 /*</replacement>*/ module.exports = Readable;
