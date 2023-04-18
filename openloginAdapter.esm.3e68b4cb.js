@@ -807,36 +807,36 @@ class OpenloginAdapter extends (0, _base.BaseAdapter) {
     }
 }
 
-},{"@toruslabs/openlogin":"46z4q","@babel/runtime/helpers/defineProperty":"4x6r7","@web3auth/base":"7HmU4","@web3auth/base-provider":"h0enr","lodash.merge":"kKE0V","a1445a7cb453765c":"lPNMN","f3cdd9acf73977d9":"gXA9M","94c1865d40e49f8f":"gfeGN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lPNMN":[function(require,module,exports) {
+},{"@toruslabs/openlogin":"46z4q","@babel/runtime/helpers/defineProperty":"4x6r7","@web3auth/base":"7HmU4","@web3auth/base-provider":"h0enr","lodash.merge":"kKE0V","a1445a7cb453765c":"5Ri1n","f3cdd9acf73977d9":"gXA9M","94c1865d40e49f8f":"5zYAU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5Ri1n":[function(require,module,exports) {
 module.exports = Promise.all([
-    require("f0426372262496f9")(require("e6ff24542909a631").getBundleURL("2Yk9L") + "solanaProvider.esm.52475cdf.js" + "?" + Date.now()).catch((err)=>{
+    require("6a576499b3435477")(require("904462962d47c727").getBundleURL("2Yk9L") + "solanaProvider.esm.411fc57d.js" + "?" + Date.now()).catch((err)=>{
         delete module.bundle.cache[module.id];
         throw err;
     }),
-    require("f0426372262496f9")(require("e6ff24542909a631").getBundleURL("2Yk9L") + "solanaProvider.esm.6e5d9b8f.js" + "?" + Date.now()).catch((err)=>{
+    require("6a576499b3435477")(require("904462962d47c727").getBundleURL("2Yk9L") + "solanaProvider.esm.6e5d9b8f.js" + "?" + Date.now()).catch((err)=>{
         delete module.bundle.cache[module.id];
         throw err;
     })
 ]).then(()=>module.bundle.root("kX9zz"));
 
-},{"f0426372262496f9":"61B45","e6ff24542909a631":"lgJ39"}],"gXA9M":[function(require,module,exports) {
+},{"6a576499b3435477":"61B45","904462962d47c727":"lgJ39"}],"gXA9M":[function(require,module,exports) {
 module.exports = require("6f821dabc9192fa4")(require("73ab3d15c1b2ca62").getBundleURL("2Yk9L") + "ethereumProvider.esm.5da502f8.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
 }).then(()=>module.bundle.root("a63bX"));
 
-},{"6f821dabc9192fa4":"61B45","73ab3d15c1b2ca62":"lgJ39"}],"gfeGN":[function(require,module,exports) {
+},{"6f821dabc9192fa4":"61B45","73ab3d15c1b2ca62":"lgJ39"}],"5zYAU":[function(require,module,exports) {
 module.exports = Promise.all([
-    require("1f0a6226cf32e455")(require("f415777bc1b40576").getBundleURL("2Yk9L") + "solanaProvider.esm.52475cdf.js" + "?" + Date.now()).catch((err)=>{
+    require("8b38edc7ef329fc5")(require("a05ab5aa67bf8c28").getBundleURL("2Yk9L") + "solanaProvider.esm.411fc57d.js" + "?" + Date.now()).catch((err)=>{
         delete module.bundle.cache[module.id];
         throw err;
     }),
-    require("1f0a6226cf32e455")(require("f415777bc1b40576").getBundleURL("2Yk9L") + "openloginEd25519.esm.dfdcd8a2.js" + "?" + Date.now()).catch((err)=>{
+    require("8b38edc7ef329fc5")(require("a05ab5aa67bf8c28").getBundleURL("2Yk9L") + "openloginEd25519.esm.dfdcd8a2.js" + "?" + Date.now()).catch((err)=>{
         delete module.bundle.cache[module.id];
         throw err;
     })
 ]).then(()=>module.bundle.root("kk15g"));
 
-},{"1f0a6226cf32e455":"61B45","f415777bc1b40576":"lgJ39"}]},["fcVid"], null, "parcelRequire8d7b")
+},{"8b38edc7ef329fc5":"61B45","a05ab5aa67bf8c28":"lgJ39"}]},["fcVid"], null, "parcelRequire8d7b")
 
 //# sourceMappingURL=openloginAdapter.esm.3e68b4cb.js.map

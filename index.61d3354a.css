@@ -1,24 +1,3 @@
-@font-face {
-  font-family: e-Ukraine;
-  src: url("e-Ukraine-Regular.0a657731.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: e-Ukraine;
-  src: url("e-Ukraine-Bold.e2f8c5db.otf");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: e-Ukraine;
-  src: url("e-Ukraine-Thin.7e606db6.otf");
-  font-weight: normal;
-  font-style: thin;
-}
-
 body {
   max-width: 1200px;
   margin: 0;
