@@ -562,7 +562,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getED25519Key", ()=>getED25519Key);
 var _tweetnaclJs = require("@toruslabs/tweetnacl-js");
 var _tweetnaclJsDefault = parcelHelpers.interopDefault(_tweetnaclJs);
-var Buffer = require("32df963d0e5e74b").Buffer;
+var Buffer = require("70a44c4c9657ad86").Buffer;
 const l = (0, _tweetnaclJsDefault.default).lowlevel;
 function getED25519Key(privateKey) {
     let privKey;
@@ -594,6 +594,6 @@ function getED25519Key(privateKey) {
     };
 }
 
-},{"32df963d0e5e74b":"fCgem","@toruslabs/tweetnacl-js":"kFi2f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8bHD6"], null, "parcelRequire8d7b")
+},{"70a44c4c9657ad86":"fCgem","@toruslabs/tweetnacl-js":"kFi2f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8bHD6"], null, "parcelRequire8d7b")
 
 //# sourceMappingURL=openloginEd25519.esm.dfdcd8a2.js.map

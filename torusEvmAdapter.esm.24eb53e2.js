@@ -787,7 +787,7 @@ var _loglevelDefault = parcelHelpers.interopDefault(_loglevel);
 var _createHash = require("create-hash");
 var _createHashDefault = parcelHelpers.interopDefault(_createHash);
 var _events = require("events");
-var Buffer = require("54b78b356f586484").Buffer;
+var Buffer = require("1ab6b87f05575652").Buffer;
 const LOGIN_PROVIDER = {
     GOOGLE: "google",
     FACEBOOK: "facebook",
@@ -3443,7 +3443,7 @@ class Torus {
     }
 }
 
-},{"54b78b356f586484":"fCgem","@babel/runtime/helpers/objectWithoutProperties":"lte4p","@babel/runtime/helpers/defineProperty":"4x6r7","@toruslabs/http-helpers":"71C66","@toruslabs/openlogin-jrpc":"hHcJo","lodash.merge":"kKE0V","@metamask/obs-store":"eM6Ix","eth-rpc-errors":"apfts","fast-deep-equal":"ixZYU","is-stream":"dpmgS","pump":"d2HVR","loglevel":"7kRFs","create-hash":"2WyL8","events":"1VQLm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eM6Ix":[function(require,module,exports) {
+},{"1ab6b87f05575652":"fCgem","@babel/runtime/helpers/objectWithoutProperties":"lte4p","@babel/runtime/helpers/defineProperty":"4x6r7","@toruslabs/http-helpers":"71C66","@toruslabs/openlogin-jrpc":"hHcJo","lodash.merge":"kKE0V","@metamask/obs-store":"eM6Ix","eth-rpc-errors":"apfts","fast-deep-equal":"ixZYU","is-stream":"dpmgS","pump":"d2HVR","loglevel":"7kRFs","create-hash":"2WyL8","events":"1VQLm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eM6Ix":[function(require,module,exports) {
 "use strict";
 var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -3463,19 +3463,19 @@ var __exportStar = this && this.__exportStar || function(m, exports1) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-__exportStar(require("7cc44aede49db07d"), exports);
-__exportStar(require("65a6bcaa60d1334"), exports);
-__exportStar(require("5009b3c76f286322"), exports);
-__exportStar(require("72905cc2ab2e80b1"), exports);
-__exportStar(require("dad4f6ebfdb21871"), exports);
+__exportStar(require("309ec807d29514c6"), exports);
+__exportStar(require("9b79a635aea7ba8"), exports);
+__exportStar(require("9ae78f565100c77d"), exports);
+__exportStar(require("64432f9de60bbddf"), exports);
+__exportStar(require("3eb635c742ac70dd"), exports);
 
-},{"7cc44aede49db07d":"ceT1n","65a6bcaa60d1334":"5eXap","5009b3c76f286322":"1LGva","72905cc2ab2e80b1":"1cedb","dad4f6ebfdb21871":"6eaqj"}],"ceT1n":[function(require,module,exports) {
+},{"309ec807d29514c6":"ceT1n","9b79a635aea7ba8":"5eXap","9ae78f565100c77d":"1LGva","64432f9de60bbddf":"1cedb","3eb635c742ac70dd":"6eaqj"}],"ceT1n":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.storeAsStream = void 0;
-const stream_1 = require("604b9422ca5a8367");
+const stream_1 = require("c3a0538c59710716");
 class ObservableStoreStream extends stream_1.Duplex {
     constructor(obsStore){
         super({
@@ -3516,13 +3516,13 @@ function storeAsStream(obsStore) {
 }
 exports.storeAsStream = storeAsStream;
 
-},{"604b9422ca5a8367":"j77ns"}],"5eXap":[function(require,module,exports) {
+},{"c3a0538c59710716":"j77ns"}],"5eXap":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.ComposedStore = void 0;
-const ObservableStore_1 = require("5035b71a470400a5");
+const ObservableStore_1 = require("9d49e783040f0bd3");
 class ComposedStore extends ObservableStore_1.ObservableStore {
     constructor(children){
         // Typecast: Preserve existing behavior
@@ -3546,7 +3546,7 @@ class ComposedStore extends ObservableStore_1.ObservableStore {
 }
 exports.ComposedStore = ComposedStore;
 
-},{"5035b71a470400a5":"1cedb"}],"1cedb":[function(require,module,exports) {
+},{"9d49e783040f0bd3":"1cedb"}],"1cedb":[function(require,module,exports) {
 "use strict";
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
@@ -3557,7 +3557,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.ObservableStore = void 0;
-const safe_event_emitter_1 = __importDefault(require("2bd34305f63842e4"));
+const safe_event_emitter_1 = __importDefault(require("f9243fd4605973c2"));
 class ObservableStore extends safe_event_emitter_1.default {
     constructor(initState){
         super();
@@ -3604,12 +3604,12 @@ class ObservableStore extends safe_event_emitter_1.default {
 }
 exports.ObservableStore = ObservableStore;
 
-},{"2bd34305f63842e4":"1duJT"}],"1duJT":[function(require,module,exports) {
+},{"f9243fd4605973c2":"1duJT"}],"1duJT":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-const events_1 = require("90401299a8399312");
+const events_1 = require("9a37bb7fa71d1555");
 function safeApply(handler, context, args) {
     try {
         Reflect.apply(handler, context, args);
@@ -3657,13 +3657,13 @@ class SafeEventEmitter extends events_1.EventEmitter {
 }
 exports.default = SafeEventEmitter;
 
-},{"90401299a8399312":"1VQLm"}],"1LGva":[function(require,module,exports) {
+},{"9a37bb7fa71d1555":"1VQLm"}],"1LGva":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.MergedStore = void 0;
-const ObservableStore_1 = require("6e47a6600674f706");
+const ObservableStore_1 = require("bd773c01249383d5");
 class MergedStore extends ObservableStore_1.ObservableStore {
     constructor(children = []){
         // Typecast: Preserve existing behavior
@@ -3685,13 +3685,13 @@ class MergedStore extends ObservableStore_1.ObservableStore {
 }
 exports.MergedStore = MergedStore;
 
-},{"6e47a6600674f706":"1cedb"}],"6eaqj":[function(require,module,exports) {
+},{"bd773c01249383d5":"1cedb"}],"6eaqj":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.storeTransformStream = void 0;
-const through2_1 = require("bf591869f03e3a1b");
+const through2_1 = require("1224faf286c4d66");
 function storeTransformStream(syncTransformFn) {
     return through2_1.obj((state, _encoding, cb)=>{
         try {
@@ -3706,9 +3706,9 @@ function storeTransformStream(syncTransformFn) {
 }
 exports.storeTransformStream = storeTransformStream;
 
-},{"bf591869f03e3a1b":"koEKb"}],"koEKb":[function(require,module,exports) {
-var process = require("293106f6a5502781");
-var Transform = require("ffc3e5af007fc8cf").Transform, inherits = require("67ab00f12cfd5b37").inherits, xtend = require("e89a5244b22c7eca");
+},{"1224faf286c4d66":"koEKb"}],"koEKb":[function(require,module,exports) {
+var process = require("7f1074b9aeed7c68");
+var Transform = require("1e9f5deb5d744439").Transform, inherits = require("d52774b78467bcc0").inherits, xtend = require("c1a50e0368ca846e");
 function DestroyableTransform(opts) {
     Transform.call(this, opts);
     this._destroyed = false;
@@ -3771,16 +3771,16 @@ module.exports.obj = through2(function(options, transform, flush) {
     return t2;
 });
 
-},{"293106f6a5502781":"d5jf4","ffc3e5af007fc8cf":"4QFs0","67ab00f12cfd5b37":"cxohQ","e89a5244b22c7eca":"93zjj"}],"4QFs0":[function(require,module,exports) {
-exports = module.exports = require("4389e6569b60789c");
+},{"7f1074b9aeed7c68":"d5jf4","1e9f5deb5d744439":"4QFs0","d52774b78467bcc0":"cxohQ","c1a50e0368ca846e":"93zjj"}],"4QFs0":[function(require,module,exports) {
+exports = module.exports = require("614408873502bbbc");
 exports.Stream = exports;
 exports.Readable = exports;
-exports.Writable = require("df1ebd8a97d0d5a1");
-exports.Duplex = require("bb4be78ea57d0583");
-exports.Transform = require("6357c36f818f1140");
-exports.PassThrough = require("deeaa75c94c5a83d");
+exports.Writable = require("988209b42c8e0fd8");
+exports.Duplex = require("98b9d8d0cdeacfa5");
+exports.Transform = require("e87f8931779e2edc");
+exports.PassThrough = require("eb983c60326fbbed");
 
-},{"4389e6569b60789c":"gWOsJ","df1ebd8a97d0d5a1":"9t0EE","bb4be78ea57d0583":"3NGW0","6357c36f818f1140":"amxHp","deeaa75c94c5a83d":"9GTaP"}],"gWOsJ":[function(require,module,exports) {
+},{"614408873502bbbc":"gWOsJ","988209b42c8e0fd8":"9t0EE","98b9d8d0cdeacfa5":"3NGW0","e87f8931779e2edc":"amxHp","eb983c60326fbbed":"9GTaP"}],"gWOsJ":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -3801,20 +3801,20 @@ exports.PassThrough = require("deeaa75c94c5a83d");
 // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
+var process = require("7c5b6b4238b509c2");
 var global = arguments[3];
-var process = require("7506ee1b82095412");
 "use strict";
-/*<replacement>*/ var pna = require("b4c2edf8c7af8247");
+/*<replacement>*/ var pna = require("5626d10fa95c371a");
 /*</replacement>*/ module.exports = Readable;
-/*<replacement>*/ var isArray = require("51f48632bc6cc90d");
+/*<replacement>*/ var isArray = require("ec4efbf3003d196");
 /*</replacement>*/ /*<replacement>*/ var Duplex;
 /*</replacement>*/ Readable.ReadableState = ReadableState;
-/*<replacement>*/ var EE = require("2bc3473922a3380d").EventEmitter;
+/*<replacement>*/ var EE = require("b7edcb0d01bc658").EventEmitter;
 var EElistenerCount = function(emitter, type) {
     return emitter.listeners(type).length;
 };
-/*</replacement>*/ /*<replacement>*/ var Stream = require("b07b74145ee997ab");
-/*</replacement>*/ /*<replacement>*/ var Buffer = require("24e39fd80d9f405").Buffer;
+/*</replacement>*/ /*<replacement>*/ var Stream = require("a22de85a0e49cd70");
+/*</replacement>*/ /*<replacement>*/ var Buffer = require("83aeb7c05f73b29e").Buffer;
 var OurUint8Array = (typeof global !== "undefined" ? global : typeof window !== "undefined" ? window : typeof self !== "undefined" ? self : {}).Uint8Array || function() {};
 function _uint8ArrayToBuffer(chunk) {
     return Buffer.from(chunk);
@@ -3822,14 +3822,14 @@ function _uint8ArrayToBuffer(chunk) {
 function _isUint8Array(obj) {
     return Buffer.isBuffer(obj) || obj instanceof OurUint8Array;
 }
-/*</replacement>*/ /*<replacement>*/ var util = Object.create(require("21d5dfee0930358c"));
-util.inherits = require("753ca107e18fa811");
-/*</replacement>*/ /*<replacement>*/ var debugUtil = require("891f89131de3e0a7");
+/*</replacement>*/ /*<replacement>*/ var util = Object.create(require("501f35ca52dc7c73"));
+util.inherits = require("3996a1d83474d6d8");
+/*</replacement>*/ /*<replacement>*/ var debugUtil = require("1bb97eac93ebab18");
 var debug = void 0;
 if (debugUtil && debugUtil.debuglog) debug = debugUtil.debuglog("stream");
 else debug = function() {};
-/*</replacement>*/ var BufferList = require("79a33fa60b06d48b");
-var destroyImpl = require("c9245da9b6ddcd0");
+/*</replacement>*/ var BufferList = require("2ea6e07b2bf4da85");
+var destroyImpl = require("b4613754feb02d92");
 var StringDecoder;
 util.inherits(Readable, Stream);
 var kProxyEvents = [
@@ -3855,7 +3855,7 @@ function prependListener(emitter, event, fn) {
     ];
 }
 function ReadableState(options, stream) {
-    Duplex = Duplex || require("6887d0fcd7b661dc");
+    Duplex = Duplex || require("95be696f710e8090");
     options = options || {};
     // Duplex streams are both readable and writable, but share
     // the same options object.
@@ -3912,13 +3912,13 @@ function ReadableState(options, stream) {
     this.decoder = null;
     this.encoding = null;
     if (options.encoding) {
-        if (!StringDecoder) StringDecoder = require("42901127fc4c5817").StringDecoder;
+        if (!StringDecoder) StringDecoder = require("4df735d8dc3f13f").StringDecoder;
         this.decoder = new StringDecoder(options.encoding);
         this.encoding = options.encoding;
     }
 }
 function Readable(options) {
-    Duplex = Duplex || require("6887d0fcd7b661dc");
+    Duplex = Duplex || require("95be696f710e8090");
     if (!(this instanceof Readable)) return new Readable(options);
     this._readableState = new ReadableState(options, this);
     // legacy
@@ -4032,7 +4032,7 @@ Readable.prototype.isPaused = function() {
 };
 // backwards compatibility.
 Readable.prototype.setEncoding = function(enc) {
-    if (!StringDecoder) StringDecoder = require("42901127fc4c5817").StringDecoder;
+    if (!StringDecoder) StringDecoder = require("4df735d8dc3f13f").StringDecoder;
     this._readableState.decoder = new StringDecoder(enc);
     this._readableState.encoding = enc;
     return this;
@@ -4636,8 +4636,8 @@ function indexOf(xs, x) {
     return -1;
 }
 
-},{"7506ee1b82095412":"d5jf4","b4c2edf8c7af8247":"1m3TC","51f48632bc6cc90d":"hk7XJ","2bc3473922a3380d":"1VQLm","b07b74145ee997ab":"2KapH","24e39fd80d9f405":"gvxcm","21d5dfee0930358c":"aUVk5","753ca107e18fa811":"bRL3M","891f89131de3e0a7":"jhUEF","79a33fa60b06d48b":"abt0h","c9245da9b6ddcd0":"ha0WT","6887d0fcd7b661dc":"3NGW0","42901127fc4c5817":"8t12z"}],"1m3TC":[function(require,module,exports) {
-var process = require("ebbc5fec2b224de0");
+},{"7c5b6b4238b509c2":"d5jf4","5626d10fa95c371a":"1m3TC","ec4efbf3003d196":"hk7XJ","b7edcb0d01bc658":"1VQLm","a22de85a0e49cd70":"2KapH","83aeb7c05f73b29e":"gvxcm","501f35ca52dc7c73":"aUVk5","3996a1d83474d6d8":"bRL3M","1bb97eac93ebab18":"jhUEF","2ea6e07b2bf4da85":"abt0h","b4613754feb02d92":"ha0WT","95be696f710e8090":"3NGW0","4df735d8dc3f13f":"8t12z"}],"1m3TC":[function(require,module,exports) {
+var process = require("9ec6ba5e2e234d21");
 "use strict";
 if (typeof process === "undefined" || !process.version || process.version.indexOf("v0.") === 0 || process.version.indexOf("v1.") === 0 && process.version.indexOf("v1.8.") !== 0) module.exports = {
     nextTick: nextTick
@@ -4673,17 +4673,17 @@ function nextTick(fn, arg1, arg2, arg3) {
     }
 }
 
-},{"ebbc5fec2b224de0":"d5jf4"}],"hk7XJ":[function(require,module,exports) {
+},{"9ec6ba5e2e234d21":"d5jf4"}],"hk7XJ":[function(require,module,exports) {
 var toString = {}.toString;
 module.exports = Array.isArray || function(arr) {
     return toString.call(arr) == "[object Array]";
 };
 
 },{}],"2KapH":[function(require,module,exports) {
-module.exports = require("c2775a64ff918f64").EventEmitter;
+module.exports = require("2a571503973f81f5").EventEmitter;
 
-},{"c2775a64ff918f64":"1VQLm"}],"gvxcm":[function(require,module,exports) {
-/* eslint-disable node/no-deprecated-api */ var buffer = require("fbd6f9ebfd44d557");
+},{"2a571503973f81f5":"1VQLm"}],"gvxcm":[function(require,module,exports) {
+/* eslint-disable node/no-deprecated-api */ var buffer = require("5e6a2d01efe8b345");
 var Buffer = buffer.Buffer;
 // alternative to using Object.keys for old browsers
 function copyProps(src, dst) {
@@ -4722,7 +4722,7 @@ SafeBuffer.allocUnsafeSlow = function(size) {
     return buffer.SlowBuffer(size);
 };
 
-},{"fbd6f9ebfd44d557":"fCgem"}],"aUVk5":[function(require,module,exports) {
+},{"5e6a2d01efe8b345":"fCgem"}],"aUVk5":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -4803,18 +4803,18 @@ function isPrimitive(arg) {
     typeof arg === "undefined";
 }
 exports.isPrimitive = isPrimitive;
-exports.isBuffer = require("7cfaa93f3f46d785").Buffer.isBuffer;
+exports.isBuffer = require("ad3d8c23dde71055").Buffer.isBuffer;
 function objectToString(o) {
     return Object.prototype.toString.call(o);
 }
 
-},{"7cfaa93f3f46d785":"fCgem"}],"abt0h":[function(require,module,exports) {
+},{"ad3d8c23dde71055":"fCgem"}],"abt0h":[function(require,module,exports) {
 "use strict";
 function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
 }
-var Buffer = require("4d31436671ed3b44").Buffer;
-var util = require("8e3242fb72eece69");
+var Buffer = require("bf980622345d6fa6").Buffer;
+var util = require("dbc14d10d2a143ac");
 function copyBuffer(src, target, offset) {
     src.copy(target, offset);
 }
@@ -4884,9 +4884,9 @@ if (util && util.inspect && util.inspect.custom) module.exports.prototype[util.i
     return this.constructor.name + " " + obj;
 };
 
-},{"4d31436671ed3b44":"gvxcm","8e3242fb72eece69":"jhUEF"}],"ha0WT":[function(require,module,exports) {
+},{"bf980622345d6fa6":"gvxcm","dbc14d10d2a143ac":"jhUEF"}],"ha0WT":[function(require,module,exports) {
 "use strict";
-/*<replacement>*/ var pna = require("78628572339f88f6");
+/*<replacement>*/ var pna = require("88fc64274cb83b7c");
 /*</replacement>*/ // undocumented cb() API, needed for core, not for public API
 function destroy(err, cb) {
     var _this = this;
@@ -4944,7 +4944,7 @@ module.exports = {
     undestroy: undestroy
 };
 
-},{"78628572339f88f6":"1m3TC"}],"3NGW0":[function(require,module,exports) {
+},{"88fc64274cb83b7c":"1m3TC"}],"3NGW0":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -4970,17 +4970,17 @@ module.exports = {
 // prototypally inherits from Readable, and then parasitically from
 // Writable.
 "use strict";
-/*<replacement>*/ var pna = require("ee74f861bcd593b8");
+/*<replacement>*/ var pna = require("c3312f426959d48b");
 /*</replacement>*/ /*<replacement>*/ var objectKeys = Object.keys || function(obj) {
     var keys = [];
     for(var key in obj)keys.push(key);
     return keys;
 };
 /*</replacement>*/ module.exports = Duplex;
-/*<replacement>*/ var util = Object.create(require("b13556565e2ba455"));
-util.inherits = require("ffbda1c4d1560013");
-/*</replacement>*/ var Readable = require("942edddf2322416");
-var Writable = require("cdaef617143ea69");
+/*<replacement>*/ var util = Object.create(require("141f2be10e5d980b"));
+util.inherits = require("51c355a5715c90b7");
+/*</replacement>*/ var Readable = require("19f8a85d8d9abdb8");
+var Writable = require("1bd2a8f5b8a69b");
 util.inherits(Duplex, Readable);
 // avoid scope creep, the keys array can then be collected
 var keys = objectKeys(Writable.prototype);
@@ -5040,7 +5040,7 @@ Duplex.prototype._destroy = function(err, cb) {
     pna.nextTick(cb, err);
 };
 
-},{"ee74f861bcd593b8":"1m3TC","b13556565e2ba455":"aUVk5","ffbda1c4d1560013":"bRL3M","942edddf2322416":"gWOsJ","cdaef617143ea69":"9t0EE"}],"9t0EE":[function(require,module,exports) {
+},{"c3312f426959d48b":"1m3TC","141f2be10e5d980b":"aUVk5","51c355a5715c90b7":"bRL3M","19f8a85d8d9abdb8":"gWOsJ","1bd2a8f5b8a69b":"9t0EE"}],"9t0EE":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -5066,7 +5066,7 @@ Duplex.prototype._destroy = function(err, cb) {
 // the drain event emission and buffering.
 var global = arguments[3];
 "use strict";
-/*<replacement>*/ var pna = require("b8a3dbfb5c80ca07");
+/*<replacement>*/ var pna = require("2cd011cee0d4cbe6");
 /*</replacement>*/ module.exports = Writable;
 /* <replacement> */ function WriteReq(chunk, encoding, cb) {
     this.chunk = chunk;
@@ -5087,13 +5087,13 @@ function CorkedRequest(state) {
 /* </replacement> */ /*<replacement>*/ var asyncWrite = (0, pna.nextTick);
 /*</replacement>*/ /*<replacement>*/ var Duplex;
 /*</replacement>*/ Writable.WritableState = WritableState;
-/*<replacement>*/ var util = Object.create(require("a3eb7d13d44d2c6b"));
-util.inherits = require("eaf9391996a8014a");
+/*<replacement>*/ var util = Object.create(require("8a467e73f5306eef"));
+util.inherits = require("d13a4bf9e124724e");
 /*</replacement>*/ /*<replacement>*/ var internalUtil = {
-    deprecate: require("ab03493db54ed96")
+    deprecate: require("e25e8bf61e7e25f8")
 };
-/*</replacement>*/ /*<replacement>*/ var Stream = require("a5f38bef3dd5cffc");
-/*</replacement>*/ /*<replacement>*/ var Buffer = require("6ca3870cecb15f1a").Buffer;
+/*</replacement>*/ /*<replacement>*/ var Stream = require("28517f2c06db9397");
+/*</replacement>*/ /*<replacement>*/ var Buffer = require("2fb3ecad9aee1baa").Buffer;
 var OurUint8Array = (typeof global !== "undefined" ? global : typeof window !== "undefined" ? window : typeof self !== "undefined" ? self : {}).Uint8Array || function() {};
 function _uint8ArrayToBuffer(chunk) {
     return Buffer.from(chunk);
@@ -5101,11 +5101,11 @@ function _uint8ArrayToBuffer(chunk) {
 function _isUint8Array(obj) {
     return Buffer.isBuffer(obj) || obj instanceof OurUint8Array;
 }
-/*</replacement>*/ var destroyImpl = require("136e9fc36d843243");
+/*</replacement>*/ var destroyImpl = require("21b8968278ae605b");
 util.inherits(Writable, Stream);
 function nop() {}
 function WritableState(options, stream) {
-    Duplex = Duplex || require("8b0a22a4cc0efbd9");
+    Duplex = Duplex || require("6f8a31f4a3c74495");
     options = options || {};
     // Duplex streams are both readable and writable, but share
     // the same options object.
@@ -5224,7 +5224,7 @@ if (typeof Symbol === "function" && Symbol.hasInstance && typeof Function.protot
     return object instanceof this;
 };
 function Writable(options) {
-    Duplex = Duplex || require("8b0a22a4cc0efbd9");
+    Duplex = Duplex || require("6f8a31f4a3c74495");
     // Writable ctor is applied to Duplexes, too.
     // `realHasInstance` is necessary because using plain `instanceof`
     // would return false, as no `_writableState` property is attached.
@@ -5579,7 +5579,7 @@ Writable.prototype._destroy = function(err, cb) {
     cb(err);
 };
 
-},{"b8a3dbfb5c80ca07":"1m3TC","a3eb7d13d44d2c6b":"aUVk5","eaf9391996a8014a":"bRL3M","ab03493db54ed96":"j92NQ","a5f38bef3dd5cffc":"2KapH","6ca3870cecb15f1a":"gvxcm","136e9fc36d843243":"ha0WT","8b0a22a4cc0efbd9":"3NGW0"}],"8t12z":[function(require,module,exports) {
+},{"2cd011cee0d4cbe6":"1m3TC","8a467e73f5306eef":"aUVk5","d13a4bf9e124724e":"bRL3M","e25e8bf61e7e25f8":"j92NQ","28517f2c06db9397":"2KapH","2fb3ecad9aee1baa":"gvxcm","21b8968278ae605b":"ha0WT","6f8a31f4a3c74495":"3NGW0"}],"8t12z":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -5601,7 +5601,7 @@ Writable.prototype._destroy = function(err, cb) {
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 "use strict";
-/*<replacement>*/ var Buffer = require("eecb48b598534795").Buffer;
+/*<replacement>*/ var Buffer = require("79d24f04d6c0f7bc").Buffer;
 /*</replacement>*/ var isEncoding = Buffer.isEncoding || function(encoding) {
     encoding = "" + encoding;
     switch(encoding && encoding.toLowerCase()){
@@ -5861,7 +5861,7 @@ function simpleEnd(buf) {
     return buf && buf.length ? this.write(buf) : "";
 }
 
-},{"eecb48b598534795":"gvxcm"}],"amxHp":[function(require,module,exports) {
+},{"79d24f04d6c0f7bc":"gvxcm"}],"amxHp":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -5925,9 +5925,9 @@ function simpleEnd(buf) {
 // the results of the previous transformed chunk were consumed.
 "use strict";
 module.exports = Transform;
-var Duplex = require("703189f8a71993a1");
-/*<replacement>*/ var util = Object.create(require("f4ac9660435d9b1"));
-util.inherits = require("8e75ec46ea6c7723");
+var Duplex = require("c8a11dad6e4ad0d0");
+/*<replacement>*/ var util = Object.create(require("29c448d7f17a7aef"));
+util.inherits = require("57b135f34451ac1b");
 /*</replacement>*/ util.inherits(Transform, Duplex);
 function afterTransform(er, data) {
     var ts = this._transformState;
@@ -6029,7 +6029,7 @@ function done(stream, er, data) {
     return stream.push(null);
 }
 
-},{"703189f8a71993a1":"3NGW0","f4ac9660435d9b1":"aUVk5","8e75ec46ea6c7723":"bRL3M"}],"9GTaP":[function(require,module,exports) {
+},{"c8a11dad6e4ad0d0":"3NGW0","29c448d7f17a7aef":"aUVk5","57b135f34451ac1b":"bRL3M"}],"9GTaP":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -6055,9 +6055,9 @@ function done(stream, er, data) {
 // Every written chunk gets output as-is.
 "use strict";
 module.exports = PassThrough;
-var Transform = require("26eae39fdae4a3f5");
-/*<replacement>*/ var util = Object.create(require("50d10db62188bca1"));
-util.inherits = require("3cad0efb557ef601");
+var Transform = require("9f2984e4dbb9a06c");
+/*<replacement>*/ var util = Object.create(require("c01d104c545c79bd"));
+util.inherits = require("a127729c16545fac");
 /*</replacement>*/ util.inherits(PassThrough, Transform);
 function PassThrough(options) {
     if (!(this instanceof PassThrough)) return new PassThrough(options);
@@ -6067,7 +6067,7 @@ PassThrough.prototype._transform = function(chunk, encoding, cb) {
     cb(null, chunk);
 };
 
-},{"26eae39fdae4a3f5":"amxHp","50d10db62188bca1":"aUVk5","3cad0efb557ef601":"bRL3M"}],"93zjj":[function(require,module,exports) {
+},{"9f2984e4dbb9a06c":"amxHp","c01d104c545c79bd":"aUVk5","a127729c16545fac":"bRL3M"}],"93zjj":[function(require,module,exports) {
 module.exports = extend;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 function extend() {

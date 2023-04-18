@@ -577,7 +577,7 @@ var _ethRpcErrors = require("eth-rpc-errors");
 var _web3Js = require("@solana/web3.js");
 var _tweetnaclJs = require("@toruslabs/tweetnacl-js");
 var _tweetnaclJsDefault = parcelHelpers.interopDefault(_tweetnaclJs);
-var Buffer = require("7da3bce6a5f2a55f").Buffer;
+var Buffer = require("8ffc03ccb1b45dc9").Buffer;
 function createChainIdMiddleware(chainId) {
     return (req, res, next, end)=>{
         if (req.method === "solana_chainId") {
@@ -1405,12 +1405,12 @@ class SolanaWallet {
     }
 }
 
-},{"7da3bce6a5f2a55f":"fCgem","@babel/runtime/helpers/defineProperty":"4x6r7","@toruslabs/base-controllers":"bWbve","@toruslabs/openlogin-jrpc":"hHcJo","@web3auth/base":"7HmU4","@web3auth/base-provider":"h0enr","bs58":"4ji3p","eth-rpc-errors":"apfts","@solana/web3.js":"5JBKN","@toruslabs/tweetnacl-js":"kFi2f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4ji3p":[function(require,module,exports) {
-var basex = require("e2eb28f8482e73af");
+},{"8ffc03ccb1b45dc9":"fCgem","@babel/runtime/helpers/defineProperty":"4x6r7","@toruslabs/base-controllers":"bWbve","@toruslabs/openlogin-jrpc":"hHcJo","@web3auth/base":"7HmU4","@web3auth/base-provider":"h0enr","bs58":"4ji3p","eth-rpc-errors":"apfts","@solana/web3.js":"5JBKN","@toruslabs/tweetnacl-js":"kFi2f","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4ji3p":[function(require,module,exports) {
+var basex = require("e1f2ab4323343fcb");
 var ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 module.exports = basex(ALPHABET);
 
-},{"e2eb28f8482e73af":"inVbl"}],"inVbl":[function(require,module,exports) {
+},{"e1f2ab4323343fcb":"inVbl"}],"inVbl":[function(require,module,exports) {
 "use strict";
 // base-x encoding / decoding
 // Copyright (c) 2018 base-x contributors
@@ -1418,7 +1418,7 @@ module.exports = basex(ALPHABET);
 // Distributed under the MIT software license, see the accompanying
 // file LICENSE or http://www.opensource.org/licenses/mit-license.php.
 // @ts-ignore
-var _Buffer = require("9dbabf458d1d34b5").Buffer;
+var _Buffer = require("15b61e552b41b995").Buffer;
 function base(ALPHABET) {
     if (ALPHABET.length >= 255) throw new TypeError("Alphabet too long");
     var BASE_MAP = new Uint8Array(256);
@@ -1526,7 +1526,7 @@ function base(ALPHABET) {
 }
 module.exports = base;
 
-},{"9dbabf458d1d34b5":"eW7r9"}],"5JBKN":[function(require,module,exports) {
+},{"15b61e552b41b995":"eW7r9"}],"5JBKN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Account", ()=>Account);
@@ -9656,9 +9656,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.sha384 = exports.sha512_256 = exports.sha512_224 = exports.sha512 = exports.SHA512 = void 0;
-const _sha2_js_1 = require("538559caefba2707");
-const _u64_js_1 = require("e6315e2c3746c99f");
-const utils_js_1 = require("9f2cf9f0a88b9866");
+const _sha2_js_1 = require("80915e7b2de299f6");
+const _u64_js_1 = require("6a4ac96a026ee184");
+const utils_js_1 = require("f60a5856245fcb8c");
 // Round contants (first 32 bits of the fractional parts of the cube roots of the first 80 primes 2..409):
 // prettier-ignore
 const [SHA512_Kh, SHA512_Kl] = _u64_js_1.default.split([
@@ -9965,14 +9965,14 @@ exports.sha512_224 = (0, utils_js_1.wrapConstructor)(()=>new SHA512_224());
 exports.sha512_256 = (0, utils_js_1.wrapConstructor)(()=>new SHA512_256());
 exports.sha384 = (0, utils_js_1.wrapConstructor)(()=>new SHA384());
 
-},{"538559caefba2707":"hJqOM","e6315e2c3746c99f":"fhGhD","9f2cf9f0a88b9866":"26nMd"}],"hJqOM":[function(require,module,exports) {
+},{"80915e7b2de299f6":"hJqOM","6a4ac96a026ee184":"fhGhD","f60a5856245fcb8c":"26nMd"}],"hJqOM":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.SHA2 = void 0;
-const _assert_js_1 = require("8399993e457732b1");
-const utils_js_1 = require("ac3d5dd81b558fe0");
+const _assert_js_1 = require("74bdb8f11a4b478d");
+const utils_js_1 = require("635cbebd2e15c750");
 // Polyfill for Safari 14
 function setBigUint64(view, byteOffset, value, isLE) {
     if (typeof view.setBigUint64 === "function") return view.setBigUint64(byteOffset, value, isLE);
@@ -10079,7 +10079,7 @@ class SHA2 extends utils_js_1.Hash {
 }
 exports.SHA2 = SHA2;
 
-},{"8399993e457732b1":"fGq6C","ac3d5dd81b558fe0":"26nMd"}],"fGq6C":[function(require,module,exports) {
+},{"74bdb8f11a4b478d":"fGq6C","635cbebd2e15c750":"26nMd"}],"fGq6C":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -10136,7 +10136,7 @@ exports.randomBytes = exports.wrapConstructorWithOpts = exports.wrapConstructor 
 // rewrites import from `crypto` to `cryptoNode`, which imports native module.
 // Makes the utils un-importable in browsers without a bundler.
 // Once node.js 18 is deprecated, we can just drop the import.
-const crypto_1 = require("16ec6ed323b55b76");
+const crypto_1 = require("5db712425714daaf");
 // Cast array to different type
 const u8 = (arr)=>new Uint8Array(arr.buffer, arr.byteOffset, arr.byteLength);
 exports.u8 = u8;
@@ -10270,7 +10270,7 @@ exports.wrapConstructorWithOpts = wrapConstructorWithOpts;
 }
 exports.randomBytes = randomBytes;
 
-},{"16ec6ed323b55b76":"88SNA"}],"88SNA":[function(require,module,exports) {
+},{"5db712425714daaf":"88SNA"}],"88SNA":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -11228,8 +11228,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.sha224 = exports.sha256 = void 0;
-const _sha2_js_1 = require("7367fd60fd0e4558");
-const utils_js_1 = require("842a3d43ccf09392");
+const _sha2_js_1 = require("490d2bc6158b3b42");
+const utils_js_1 = require("720f3939ed5bce24");
 // Choice: a ? b : c
 const Chi = (a, b, c)=>a & b ^ ~a & c;
 // Majority function, true if any two inpust is true
@@ -11422,8 +11422,8 @@ class SHA224 extends SHA256 {
  */ exports.sha256 = (0, utils_js_1.wrapConstructor)(()=>new SHA256());
 exports.sha224 = (0, utils_js_1.wrapConstructor)(()=>new SHA224());
 
-},{"7367fd60fd0e4558":"hJqOM","842a3d43ccf09392":"26nMd"}],"4JCmN":[function(require,module,exports) {
-var Buffer = require("c1f06394553ea8fd").Buffer;
+},{"490d2bc6158b3b42":"hJqOM","720f3939ed5bce24":"26nMd"}],"4JCmN":[function(require,module,exports) {
+var Buffer = require("62190c3c67a71d8d").Buffer;
 "use strict";
 var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -11469,10 +11469,10 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.deserializeUnchecked = exports.deserialize = exports.serialize = exports.BinaryReader = exports.BinaryWriter = exports.BorshError = exports.baseDecode = exports.baseEncode = void 0;
-const bn_js_1 = __importDefault(require("56c5c6ec72ad5d3e"));
-const bs58_1 = __importDefault(require("88cd2506ab8c176a"));
+const bn_js_1 = __importDefault(require("604c09bae449ee5c"));
+const bs58_1 = __importDefault(require("755d1cd99aab3206"));
 // TODO: Make sure this polyfill not included when not required
-const encoding = __importStar(require("f3cd2af20737b0b1"));
+const encoding = __importStar(require("64ef54e98b6daf58"));
 const ResolvedTextDecoder = typeof TextDecoder !== "function" ? encoding.TextDecoder : TextDecoder;
 const textDecoder = new ResolvedTextDecoder("utf-8", {
     fatal: true
@@ -11822,7 +11822,7 @@ function deserializeUnchecked(schema, classType, buffer, Reader = BinaryReader) 
 }
 exports.deserializeUnchecked = deserializeUnchecked;
 
-},{"c1f06394553ea8fd":"fCgem","56c5c6ec72ad5d3e":"VopIn","88cd2506ab8c176a":"4ji3p","f3cd2af20737b0b1":"feCA6"}],"feCA6":[function(require,module,exports) {
+},{"62190c3c67a71d8d":"fCgem","604c09bae449ee5c":"VopIn","755d1cd99aab3206":"4ji3p","64ef54e98b6daf58":"feCA6"}],"feCA6":[function(require,module,exports) {
 "use strict";
 // This is free and unencumbered software released into the public domain.
 // See LICENSE.md for more information.
@@ -12414,7 +12414,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.s16 = exports.s8 = exports.nu64be = exports.u48be = exports.u40be = exports.u32be = exports.u24be = exports.u16be = exports.nu64 = exports.u48 = exports.u40 = exports.u32 = exports.u24 = exports.u16 = exports.u8 = exports.offset = exports.greedy = exports.Constant = exports.UTF8 = exports.CString = exports.Blob = exports.Boolean = exports.BitField = exports.BitStructure = exports.VariantLayout = exports.Union = exports.UnionLayoutDiscriminator = exports.UnionDiscriminator = exports.Structure = exports.Sequence = exports.DoubleBE = exports.Double = exports.FloatBE = exports.Float = exports.NearInt64BE = exports.NearInt64 = exports.NearUInt64BE = exports.NearUInt64 = exports.IntBE = exports.Int = exports.UIntBE = exports.UInt = exports.OffsetLayout = exports.GreedyCount = exports.ExternalLayout = exports.bindConstructorLayout = exports.nameWithProperty = exports.Layout = exports.uint8ArrayToBuffer = exports.checkUint8Array = void 0;
 exports.constant = exports.utf8 = exports.cstr = exports.blob = exports.unionLayoutDiscriminator = exports.union = exports.seq = exports.bits = exports.struct = exports.f64be = exports.f64 = exports.f32be = exports.f32 = exports.ns64be = exports.s48be = exports.s40be = exports.s32be = exports.s24be = exports.s16be = exports.ns64 = exports.s48 = exports.s40 = exports.s32 = exports.s24 = void 0;
-const buffer_1 = require("ee79a132a8187a91");
+const buffer_1 = require("6249320fc57c108e");
 /* Check if a value is a Uint8Array.
  *
  * @ignore */ function checkUint8Array(b) {
@@ -14213,8 +14213,8 @@ exports.Constant = Constant;
 /** Factory for {@link UTF8} values. */ exports.utf8 = (maxSpan, property)=>new UTF8(maxSpan, property);
 /** Factory for {@link Constant} values. */ exports.constant = (value, property)=>new Constant(value, property);
 
-},{"ee79a132a8187a91":"fCgem"}],"b5EGn":[function(require,module,exports) {
-var Buffer = require("424ea7b7b2aa6c3f").Buffer;
+},{"6249320fc57c108e":"fCgem"}],"b5EGn":[function(require,module,exports) {
+var Buffer = require("452253150e31b6a9").Buffer;
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -14278,7 +14278,7 @@ exports.toBufferLE = toBufferLE;
 }
 exports.toBufferBE = toBufferBE;
 
-},{"424ea7b7b2aa6c3f":"fCgem"}],"kxTXl":[function(require,module,exports) {
+},{"452253150e31b6a9":"fCgem"}],"kxTXl":[function(require,module,exports) {
 /**
  * A `StructFailure` represents a single specific failure in validation.
  */ /**
@@ -15169,8 +15169,8 @@ function union(Structs) {
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ckwy4":[function(require,module,exports) {
 "use strict";
-const uuid = require("eac7d61fe90353b").v4;
-const generateRequest = require("f95bedb36f8b571d");
+const uuid = require("ef51ba2232db8920").v4;
+const generateRequest = require("a02b0c8f467c9e44");
 /**
  * Constructor for a Jayson Browser Client that does not depend any node.js core libraries
  * @class ClientBrowser
@@ -15286,7 +15286,7 @@ module.exports = ClientBrowser;
     callback(null, response);
 };
 
-},{"eac7d61fe90353b":"j4KJi","f95bedb36f8b571d":"10Eev"}],"j4KJi":[function(require,module,exports) {
+},{"ef51ba2232db8920":"j4KJi","a02b0c8f467c9e44":"10Eev"}],"j4KJi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "v1", ()=>(0, _v1JsDefault.default));
@@ -15862,7 +15862,7 @@ exports.default = version;
 
 },{"./validate.js":"eHPgI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"10Eev":[function(require,module,exports) {
 "use strict";
-const uuid = require("1308496a75c2f4c9").v4;
+const uuid = require("c3db9ccef89a2840").v4;
 /**
  *  Generates a JSON-RPC 1.0 or 2.0 request
  *  @param {String} method Name of method to call
@@ -15904,27 +15904,27 @@ const uuid = require("1308496a75c2f4c9").v4;
 };
 module.exports = generateRequest;
 
-},{"1308496a75c2f4c9":"j4KJi"}],"bMhve":[function(require,module,exports) {
+},{"c3db9ccef89a2840":"j4KJi"}],"bMhve":[function(require,module,exports) {
 /**
  * "Client" wraps "ws" or a browser-implemented "WebSocket" library
  * according to the environment providing JSON RPC 2.0 support on top.
  * @module Client
- */ var Buffer = require("d791780a92ed9f7b").Buffer;
+ */ var Buffer = require("e5d27673cbd0309d").Buffer;
 "use strict";
-var _interopRequireDefault = require("c5627bfe4c955a5b");
+var _interopRequireDefault = require("a193e420cb059d64");
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports["default"] = void 0;
-var _regenerator = _interopRequireDefault(require("e261f31fd9b687a"));
-var _asyncToGenerator2 = _interopRequireDefault(require("a32b82a664b81c64"));
-var _typeof2 = _interopRequireDefault(require("29dee57822b64de3"));
-var _classCallCheck2 = _interopRequireDefault(require("84bc7b3008310601"));
-var _createClass2 = _interopRequireDefault(require("eb437a31f3bc340b"));
-var _inherits2 = _interopRequireDefault(require("a510a731d39544a6"));
-var _possibleConstructorReturn2 = _interopRequireDefault(require("588b4c9407ed93c1"));
-var _getPrototypeOf2 = _interopRequireDefault(require("fb8b0820b8feeccb"));
-var _eventemitter = require("cfad8574aeec677a");
+var _regenerator = _interopRequireDefault(require("f584fd3b999ecd21"));
+var _asyncToGenerator2 = _interopRequireDefault(require("971a9d4563e809e0"));
+var _typeof2 = _interopRequireDefault(require("b49eb13f32292d16"));
+var _classCallCheck2 = _interopRequireDefault(require("a86a11fa6bacafee"));
+var _createClass2 = _interopRequireDefault(require("fa713d5b4fb012a8"));
+var _inherits2 = _interopRequireDefault(require("86c7772e58c3dec4"));
+var _possibleConstructorReturn2 = _interopRequireDefault(require("c4f53fc22f82401"));
+var _getPrototypeOf2 = _interopRequireDefault(require("217eabf6047da41d"));
+var _eventemitter = require("94192e3337053676");
 function _createSuper(Derived) {
     var hasNativeReflectConstruct = _isNativeReflectConstruct();
     return function _createSuperInternal() {
@@ -16267,8 +16267,8 @@ var CommonClient = /*#__PURE__*/ function(_EventEmitter) {
 }(_eventemitter.EventEmitter);
 exports["default"] = CommonClient;
 
-},{"d791780a92ed9f7b":"fCgem","c5627bfe4c955a5b":"7XM86","e261f31fd9b687a":"5nQUq","a32b82a664b81c64":"jxKg8","29dee57822b64de3":"jgQjt","84bc7b3008310601":"3nRml","eb437a31f3bc340b":"2yzPp","a510a731d39544a6":"bYd1U","588b4c9407ed93c1":"cW3L5","fb8b0820b8feeccb":"gWrBy","cfad8574aeec677a":"3fnfh"}],"bYd1U":[function(require,module,exports) {
-var setPrototypeOf = require("752a77738081950b");
+},{"e5d27673cbd0309d":"fCgem","a193e420cb059d64":"7XM86","f584fd3b999ecd21":"5nQUq","971a9d4563e809e0":"jxKg8","b49eb13f32292d16":"jgQjt","a86a11fa6bacafee":"3nRml","fa713d5b4fb012a8":"2yzPp","86c7772e58c3dec4":"bYd1U","c4f53fc22f82401":"cW3L5","217eabf6047da41d":"gWrBy","94192e3337053676":"3fnfh"}],"bYd1U":[function(require,module,exports) {
+var setPrototypeOf = require("8f02a8c9225fe07c");
 function _inherits(subClass, superClass) {
     if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function");
     subClass.prototype = Object.create(superClass && superClass.prototype, {
@@ -16285,7 +16285,7 @@ function _inherits(subClass, superClass) {
 }
 module.exports = _inherits, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
-},{"752a77738081950b":"bblYu"}],"bblYu":[function(require,module,exports) {
+},{"8f02a8c9225fe07c":"bblYu"}],"bblYu":[function(require,module,exports) {
 function _setPrototypeOf(o, p) {
     module.exports = _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
         o.__proto__ = p;
@@ -16296,8 +16296,8 @@ function _setPrototypeOf(o, p) {
 module.exports = _setPrototypeOf, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 },{}],"cW3L5":[function(require,module,exports) {
-var _typeof = require("c2e51716d4563650")["default"];
-var assertThisInitialized = require("fceb50ff28d61acc");
+var _typeof = require("9b124bed411cd32b")["default"];
+var assertThisInitialized = require("ace185c96131db36");
 function _possibleConstructorReturn(self, call) {
     if (call && (_typeof(call) === "object" || typeof call === "function")) return call;
     else if (call !== void 0) throw new TypeError("Derived constructors may only return object or undefined");
@@ -16305,7 +16305,7 @@ function _possibleConstructorReturn(self, call) {
 }
 module.exports = _possibleConstructorReturn, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
-},{"c2e51716d4563650":"jgQjt","fceb50ff28d61acc":"1mVba"}],"1mVba":[function(require,module,exports) {
+},{"9b124bed411cd32b":"jgQjt","ace185c96131db36":"1mVba"}],"1mVba":[function(require,module,exports) {
 function _assertThisInitialized(self) {
     if (self === void 0) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     return self;
@@ -16326,17 +16326,17 @@ module.exports = _getPrototypeOf, module.exports.__esModule = true, module.expor
  * WebSocket implements a browser-side WebSocket specification.
  * @module Client
  */ "use strict";
-var _interopRequireDefault = require("a4b94a2c034ad1c4");
+var _interopRequireDefault = require("b89015fbee801de8");
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports["default"] = _default;
-var _classCallCheck2 = _interopRequireDefault(require("451ab0a12c50a497"));
-var _createClass2 = _interopRequireDefault(require("5fb20a6b592cd0da"));
-var _inherits2 = _interopRequireDefault(require("f9b424d4063f75ba"));
-var _possibleConstructorReturn2 = _interopRequireDefault(require("9e962138cbc8857a"));
-var _getPrototypeOf2 = _interopRequireDefault(require("53d41d945433bdda"));
-var _eventemitter = require("997a1150091dcca1");
+var _classCallCheck2 = _interopRequireDefault(require("2ce12b297a6f59ba"));
+var _createClass2 = _interopRequireDefault(require("c7cbf567f29be870"));
+var _inherits2 = _interopRequireDefault(require("fda1895c80868d68"));
+var _possibleConstructorReturn2 = _interopRequireDefault(require("70c49cf56219a324"));
+var _getPrototypeOf2 = _interopRequireDefault(require("ba1314145e7ec9bf"));
+var _eventemitter = require("c4f335eb1e8a256e");
 function _createSuper(Derived) {
     var hasNativeReflectConstruct = _isNativeReflectConstruct();
     return function _createSuperInternal() {
@@ -16432,15 +16432,15 @@ var WebSocketBrowserImpl = /*#__PURE__*/ function(_EventEmitter) {
     return new WebSocketBrowserImpl(address, options);
 }
 
-},{"a4b94a2c034ad1c4":"7XM86","451ab0a12c50a497":"3nRml","5fb20a6b592cd0da":"2yzPp","f9b424d4063f75ba":"bYd1U","9e962138cbc8857a":"cW3L5","53d41d945433bdda":"gWrBy","997a1150091dcca1":"3fnfh"}],"2HLbt":[function(require,module,exports) {
+},{"b89015fbee801de8":"7XM86","2ce12b297a6f59ba":"3nRml","c7cbf567f29be870":"2yzPp","fda1895c80868d68":"bYd1U","70c49cf56219a324":"cW3L5","ba1314145e7ec9bf":"gWrBy","c4f335eb1e8a256e":"3fnfh"}],"2HLbt":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.shake256 = exports.shake128 = exports.keccak_512 = exports.keccak_384 = exports.keccak_256 = exports.keccak_224 = exports.sha3_512 = exports.sha3_384 = exports.sha3_256 = exports.sha3_224 = exports.Keccak = exports.keccakP = void 0;
-const _assert_js_1 = require("a355f713dfa7d5fd");
-const _u64_js_1 = require("e29e644046bd03bc");
-const utils_js_1 = require("b53c6c44cc0d8fd6");
+const _assert_js_1 = require("d3ea44d1cb88dc08");
+const _u64_js_1 = require("c5da886994fe1947");
+const utils_js_1 = require("dcc317a0aa8f60b1");
 // Various per round constants calculations
 const [SHA3_PI, SHA3_ROTL, _SHA3_IOTA] = [
     [],
@@ -16639,14 +16639,14 @@ const genShake = (suffix, blockLen, outputLen)=>(0, utils_js_1.wrapConstructorWi
 exports.shake128 = genShake(0x1f, 168, 16);
 exports.shake256 = genShake(0x1f, 136, 32);
 
-},{"a355f713dfa7d5fd":"fGq6C","e29e644046bd03bc":"fhGhD","b53c6c44cc0d8fd6":"26nMd"}],"6C6bW":[function(require,module,exports) {
+},{"d3ea44d1cb88dc08":"fGq6C","c5da886994fe1947":"fhGhD","dcc317a0aa8f60b1":"26nMd"}],"6C6bW":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.hmac = void 0;
-const _assert_js_1 = require("19ecbf13b07cabb2");
-const utils_js_1 = require("c67794eab1204568");
+const _assert_js_1 = require("a6909ffca430c5a9");
+const utils_js_1 = require("23227b65cb1dbad3");
 // HMAC (RFC 2104)
 class HMAC extends utils_js_1.Hash {
     constructor(hash, _key){
@@ -16719,6 +16719,6 @@ class HMAC extends utils_js_1.Hash {
 exports.hmac = hmac;
 exports.hmac.create = (hash, key)=>new HMAC(hash, key);
 
-},{"19ecbf13b07cabb2":"fGq6C","c67794eab1204568":"26nMd"}]},["hmOoa"], null, "parcelRequire8d7b")
+},{"a6909ffca430c5a9":"fGq6C","23227b65cb1dbad3":"26nMd"}]},["hmOoa"], null, "parcelRequire8d7b")
 
 //# sourceMappingURL=solanaProvider.esm.6e5d9b8f.js.map

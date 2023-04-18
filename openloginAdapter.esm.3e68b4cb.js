@@ -764,14 +764,14 @@ class OpenloginAdapter extends (0, _base.BaseAdapter) {
         if (!this.chainConfig) throw (0, _base.WalletInitializationError).invalidParams("chainConfig is required before initialization");
         if (!this.openloginInstance) throw (0, _base.WalletInitializationError).notReady("openloginInstance is not ready");
         if (this.currentChainNamespace === (0, _base.CHAIN_NAMESPACES).SOLANA) {
-            const { SolanaPrivateKeyProvider  } = await require("c1e6f8a0009433e2");
+            const { SolanaPrivateKeyProvider  } = await require("a1445a7cb453765c");
             this.privKeyProvider = new SolanaPrivateKeyProvider({
                 config: {
                     chainConfig: this.chainConfig
                 }
             });
         } else if (this.currentChainNamespace === (0, _base.CHAIN_NAMESPACES).EIP155) {
-            const { EthereumPrivateKeyProvider  } = await require("56d99335017c3674");
+            const { EthereumPrivateKeyProvider  } = await require("f3cdd9acf73977d9");
             this.privKeyProvider = new EthereumPrivateKeyProvider({
                 config: {
                     chainConfig: this.chainConfig
@@ -794,7 +794,7 @@ class OpenloginAdapter extends (0, _base.BaseAdapter) {
         let finalPrivKey = this._getFinalPrivKey();
         if (finalPrivKey) {
             if (this.currentChainNamespace === (0, _base.CHAIN_NAMESPACES).SOLANA) {
-                const { getED25519Key  } = await require("1dea7ff80c5e456d");
+                const { getED25519Key  } = await require("94c1865d40e49f8f");
                 finalPrivKey = getED25519Key(finalPrivKey).sk.toString("hex");
             }
             await this.privKeyProvider.setupProvider(finalPrivKey);
@@ -807,36 +807,36 @@ class OpenloginAdapter extends (0, _base.BaseAdapter) {
     }
 }
 
-},{"@toruslabs/openlogin":"46z4q","@babel/runtime/helpers/defineProperty":"4x6r7","@web3auth/base":"7HmU4","@web3auth/base-provider":"h0enr","lodash.merge":"kKE0V","c1e6f8a0009433e2":"eL8RX","56d99335017c3674":"gXA9M","1dea7ff80c5e456d":"ctwL2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eL8RX":[function(require,module,exports) {
+},{"@toruslabs/openlogin":"46z4q","@babel/runtime/helpers/defineProperty":"4x6r7","@web3auth/base":"7HmU4","@web3auth/base-provider":"h0enr","lodash.merge":"kKE0V","a1445a7cb453765c":"lPNMN","f3cdd9acf73977d9":"gXA9M","94c1865d40e49f8f":"gfeGN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lPNMN":[function(require,module,exports) {
 module.exports = Promise.all([
-    require("182ce98144e40313")(require("a47b05391ad1ae7e").getBundleURL("2Yk9L") + "solanaProvider.esm.f062a23d.js" + "?" + Date.now()).catch((err)=>{
+    require("f0426372262496f9")(require("e6ff24542909a631").getBundleURL("2Yk9L") + "solanaProvider.esm.52475cdf.js" + "?" + Date.now()).catch((err)=>{
         delete module.bundle.cache[module.id];
         throw err;
     }),
-    require("182ce98144e40313")(require("a47b05391ad1ae7e").getBundleURL("2Yk9L") + "solanaProvider.esm.6e5d9b8f.js" + "?" + Date.now()).catch((err)=>{
+    require("f0426372262496f9")(require("e6ff24542909a631").getBundleURL("2Yk9L") + "solanaProvider.esm.6e5d9b8f.js" + "?" + Date.now()).catch((err)=>{
         delete module.bundle.cache[module.id];
         throw err;
     })
 ]).then(()=>module.bundle.root("kX9zz"));
 
-},{"182ce98144e40313":"61B45","a47b05391ad1ae7e":"lgJ39"}],"gXA9M":[function(require,module,exports) {
-module.exports = require("1748774c43411584")(require("265a06d32fe1bf05").getBundleURL("2Yk9L") + "ethereumProvider.esm.5da502f8.js" + "?" + Date.now()).catch((err)=>{
+},{"f0426372262496f9":"61B45","e6ff24542909a631":"lgJ39"}],"gXA9M":[function(require,module,exports) {
+module.exports = require("6f821dabc9192fa4")(require("73ab3d15c1b2ca62").getBundleURL("2Yk9L") + "ethereumProvider.esm.5da502f8.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
 }).then(()=>module.bundle.root("a63bX"));
 
-},{"1748774c43411584":"61B45","265a06d32fe1bf05":"lgJ39"}],"ctwL2":[function(require,module,exports) {
+},{"6f821dabc9192fa4":"61B45","73ab3d15c1b2ca62":"lgJ39"}],"gfeGN":[function(require,module,exports) {
 module.exports = Promise.all([
-    require("94af3790d6364117")(require("9811faed90aba9a4").getBundleURL("2Yk9L") + "solanaProvider.esm.f062a23d.js" + "?" + Date.now()).catch((err)=>{
+    require("1f0a6226cf32e455")(require("f415777bc1b40576").getBundleURL("2Yk9L") + "solanaProvider.esm.52475cdf.js" + "?" + Date.now()).catch((err)=>{
         delete module.bundle.cache[module.id];
         throw err;
     }),
-    require("94af3790d6364117")(require("9811faed90aba9a4").getBundleURL("2Yk9L") + "openloginEd25519.esm.dfdcd8a2.js" + "?" + Date.now()).catch((err)=>{
+    require("1f0a6226cf32e455")(require("f415777bc1b40576").getBundleURL("2Yk9L") + "openloginEd25519.esm.dfdcd8a2.js" + "?" + Date.now()).catch((err)=>{
         delete module.bundle.cache[module.id];
         throw err;
     })
 ]).then(()=>module.bundle.root("kk15g"));
 
-},{"94af3790d6364117":"61B45","9811faed90aba9a4":"lgJ39"}]},["fcVid"], null, "parcelRequire8d7b")
+},{"1f0a6226cf32e455":"61B45","f415777bc1b40576":"lgJ39"}]},["fcVid"], null, "parcelRequire8d7b")
 
 //# sourceMappingURL=openloginAdapter.esm.3e68b4cb.js.map

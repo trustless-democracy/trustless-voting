@@ -776,7 +776,7 @@ var _loglevel = require("loglevel");
 var _loglevelDefault = parcelHelpers.interopDefault(_loglevel);
 var _fastDeepEqual = require("fast-deep-equal");
 var _fastDeepEqualDefault = parcelHelpers.interopDefault(_fastDeepEqual);
-var Buffer = require("d9bf9450bb81c1b0").Buffer;
+var Buffer = require("8068956d9743cdfd").Buffer;
 var version = "0.3.4";
 var messages = {
     errors: {
@@ -2262,7 +2262,7 @@ class Torus {
     }
 }
 
-},{"d9bf9450bb81c1b0":"fCgem","@babel/runtime/helpers/defineProperty":"4x6r7","@solana/web3.js":"5JBKN","@toruslabs/base-controllers":"bWbve","@toruslabs/http-helpers":"71C66","@toruslabs/openlogin-jrpc":"hHcJo","eth-rpc-errors":"apfts","is-stream":"dpmgS","pump":"d2HVR","loglevel":"7kRFs","fast-deep-equal":"ixZYU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dpmgS":[function(require,module,exports) {
+},{"8068956d9743cdfd":"fCgem","@babel/runtime/helpers/defineProperty":"4x6r7","@solana/web3.js":"5JBKN","@toruslabs/base-controllers":"bWbve","@toruslabs/http-helpers":"71C66","@toruslabs/openlogin-jrpc":"hHcJo","eth-rpc-errors":"apfts","is-stream":"dpmgS","pump":"d2HVR","loglevel":"7kRFs","fast-deep-equal":"ixZYU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dpmgS":[function(require,module,exports) {
 "use strict";
 const isStream = (stream)=>stream !== null && typeof stream === "object" && typeof stream.pipe === "function";
 isStream.writable = (stream)=>isStream(stream) && stream.writable !== false && typeof stream._write === "function" && typeof stream._writableState === "object";

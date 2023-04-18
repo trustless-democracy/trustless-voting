@@ -1866,7 +1866,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.getWindowMetadata = void 0;
-const window_getters_1 = require("9eecf468c4ab636b");
+const window_getters_1 = require("aed3e690c0fc41eb");
 function getWindowMetadata() {
     let doc;
     let loc;
@@ -1948,7 +1948,7 @@ function getWindowMetadata() {
 }
 exports.getWindowMetadata = getWindowMetadata;
 
-},{"9eecf468c4ab636b":"6JJEL"}],"6JJEL":[function(require,module,exports) {
+},{"aed3e690c0fc41eb":"6JJEL"}],"6JJEL":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -2079,7 +2079,7 @@ parcelHelpers.export(exports, "browserName", ()=>browserName);
 parcelHelpers.export(exports, "parseUserAgent", ()=>parseUserAgent);
 parcelHelpers.export(exports, "detectOS", ()=>detectOS);
 parcelHelpers.export(exports, "getNodeVersion", ()=>getNodeVersion);
-var process = require("862e01ba75627ae5");
+var process = require("b60e41c59093eb33");
 var __spreadArrays = undefined && undefined.__spreadArrays || function() {
     for(var s = 0, i = 0, il = arguments.length; i < il; i++)s += arguments[i].length;
     for(var r = Array(s), k = 0, i = 0; i < il; i++)for(var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)r[k] = a[j];
@@ -2422,7 +2422,7 @@ function createVersionParts(count) {
     return output;
 }
 
-},{"862e01ba75627ae5":"d5jf4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dYF1L":[function(require,module,exports) {
+},{"b60e41c59093eb33":"d5jf4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dYF1L":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "safeJsonParse", ()=>safeJsonParse);
@@ -2716,7 +2716,7 @@ function convertNumberToHex(num, noPrefix) {
     BN.wordSize = 26;
     var Buffer;
     try {
-        Buffer = require("14a539965a49bc88").Buffer;
+        Buffer = require("b746c887af6bb24a").Buffer;
     } catch (e) {}
     BN.isBN = function isBN(num) {
         if (num instanceof BN) return true;
@@ -5362,7 +5362,7 @@ function convertNumberToHex(num, noPrefix) {
     };
 })(module, this);
 
-},{"14a539965a49bc88":"jhUEF"}],"2NXLj":[function(require,module,exports) {
+},{"b746c887af6bb24a":"jhUEF"}],"2NXLj":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "bufferToArray", ()=>bufferToArray);
@@ -5421,7 +5421,7 @@ var _isTypedarray = require("is-typedarray");
 var _isTypedarrayDefault = parcelHelpers.interopDefault(_isTypedarray);
 var _typedarrayToBuffer = require("typedarray-to-buffer");
 var _typedarrayToBufferDefault = parcelHelpers.interopDefault(_typedarrayToBuffer);
-var Buffer = require("d332b498885b7cef").Buffer;
+var Buffer = require("c979368f96f35fc7").Buffer;
 const ENC_HEX = "hex";
 const ENC_UTF8 = "utf8";
 const ENC_BIN = "binary";
@@ -5637,7 +5637,7 @@ function padString(str, length, left, padding = STRING_ZERO) {
     return result;
 }
 
-},{"d332b498885b7cef":"fCgem","is-typedarray":"aCwce","typedarray-to-buffer":"2lRgC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aCwce":[function(require,module,exports) {
+},{"c979368f96f35fc7":"fCgem","is-typedarray":"aCwce","typedarray-to-buffer":"2lRgC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aCwce":[function(require,module,exports) {
 module.exports = isTypedArray;
 isTypedArray.strict = isStrictTypedArray;
 isTypedArray.loose = isLooseTypedArray;
@@ -5671,8 +5671,8 @@ function isLooseTypedArray(arr) {
  * License:  MIT
  *
  * `npm install typedarray-to-buffer`
- */ var Buffer = require("7896de7a806165a1").Buffer;
-var isTypedArray = require("8f4a329860d74d72").strict;
+ */ var Buffer = require("398de18a639baac0").Buffer;
+var isTypedArray = require("bdfdb96a1e6fd0bd").strict;
 module.exports = function typedarrayToBuffer(arr) {
     if (isTypedArray(arr)) {
         // To avoid a copy, use the typed array's underlying ArrayBuffer to back new Buffer
@@ -5684,7 +5684,7 @@ module.exports = function typedarrayToBuffer(arr) {
     return Buffer.from(arr);
 };
 
-},{"7896de7a806165a1":"fCgem","8f4a329860d74d72":"aCwce"}],"fSzyo":[function(require,module,exports) {
+},{"398de18a639baac0":"fCgem","bdfdb96a1e6fd0bd":"aCwce"}],"fSzyo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "toChecksumAddress", ()=>toChecksumAddress);
@@ -5948,11 +5948,11 @@ const isNodeJs = (0, _environment.isNode);
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-const tslib_1 = require("e289490d26e26307");
-tslib_1.__exportStar(require("582d16231a4e52cc"), exports);
-tslib_1.__exportStar(require("c3111e0c3814527"), exports);
+const tslib_1 = require("1d73d7df63163671");
+tslib_1.__exportStar(require("64434a9dbda9c775"), exports);
+tslib_1.__exportStar(require("c9327057b7aeb654"), exports);
 
-},{"e289490d26e26307":"lRdW5","582d16231a4e52cc":"4dzvu","c3111e0c3814527":"a11RJ"}],"4dzvu":[function(require,module,exports) {
+},{"1d73d7df63163671":"lRdW5","64434a9dbda9c775":"4dzvu","c9327057b7aeb654":"a11RJ"}],"4dzvu":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 Object.defineProperty(exports, "__esModule", {
@@ -5974,7 +5974,7 @@ function isBrowserCryptoAvailable() {
 exports.isBrowserCryptoAvailable = isBrowserCryptoAvailable;
 
 },{}],"a11RJ":[function(require,module,exports) {
-var process = require("219d1cf2c0fb705a");
+var process = require("90d38239e37deea9");
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -5993,7 +5993,7 @@ function isBrowser() {
 }
 exports.isBrowser = isBrowser;
 
-},{"219d1cf2c0fb705a":"d5jf4"}],"3MpJQ":[function(require,module,exports) {
+},{"90d38239e37deea9":"d5jf4"}],"3MpJQ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "payloadId", ()=>payloadId);
@@ -6369,9 +6369,9 @@ function formatQueryString(queryParams) {
 
 },{"query-string":"k40w8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k40w8":[function(require,module,exports) {
 "use strict";
-const strictUriEncode = require("5db8a34d0260c62c");
-const decodeComponent = require("bdd465e98e589d7c");
-const splitOnFirst = require("a9d11277594aa2f3");
+const strictUriEncode = require("bc4eb24abdaf307");
+const decodeComponent = require("f44aaf7ebe2f0c9f");
+const splitOnFirst = require("82022ac56e1af7a");
 const isNullOrUndefined = (value)=>value === null || value === undefined;
 function encoderForArrayFormat(options) {
     switch(options.arrayFormat){
@@ -6634,14 +6634,14 @@ exports.stringifyUrl = (input, options)=>{
     return `${url}${queryString}${hash}`;
 };
 
-},{"5db8a34d0260c62c":"72Fvn","bdd465e98e589d7c":"1clyr","a9d11277594aa2f3":"70WYe"}],"89RYI":[function(require,module,exports) {
+},{"bc4eb24abdaf307":"72Fvn","f44aaf7ebe2f0c9f":"1clyr","82022ac56e1af7a":"70WYe"}],"89RYI":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _utils = require("@walletconnect/utils");
 var _network = require("./network");
 var _networkDefault = parcelHelpers.interopDefault(_network);
 var global = arguments[3];
-const WS = typeof global.WebSocket !== "undefined" ? global.WebSocket : require("48b978ffd59e3547");
+const WS = typeof global.WebSocket !== "undefined" ? global.WebSocket : require("5aff319fc978a017");
 class SocketTransport {
     constructor(opts){
         this.opts = opts;
@@ -6805,7 +6805,7 @@ function getWebSocketUrl(_url, protocol, version) {
 }
 exports.default = SocketTransport;
 
-},{"@walletconnect/utils":"lXjaj","./network":"kD3Pe","48b978ffd59e3547":"13N0i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kD3Pe":[function(require,module,exports) {
+},{"@walletconnect/utils":"lXjaj","./network":"kD3Pe","5aff319fc978a017":"13N0i","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kD3Pe":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class NetworkMonitor {

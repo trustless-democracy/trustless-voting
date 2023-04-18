@@ -1,8 +1,32 @@
+@font-face {
+  font-family: e-Ukraine;
+  src: url("e-Ukraine-Regular.0a657731.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: e-Ukraine;
+  src: url("e-Ukraine-Bold.e2f8c5db.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: e-Ukraine;
+  src: url("e-Ukraine-Thin.7e606db6.otf");
+  font-weight: normal;
+  font-style: thin;
+}
+
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  max-width: 1200px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 code {
