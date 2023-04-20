@@ -2,10 +2,16 @@ import { useAccount, useConnect, useDisconnect } from 'wagmi'
 
 export function Connect() {
   const { connector, isConnected, address } = useAccount()
-  const { connect, connectors, error, isLoading, pendingConnector } = useConnect()
+  const { connect, connectors, isLoading, pendingConnector } = useConnect({
+    onError: error => {
+      console.error(error)
+      alert("Please connect again after page reloaded")
+      location.reload()
+    }
+  })
   const { disconnect } = useDisconnect()
 
-    return (
+  return (
     <div>
       <div>
         {isConnected && <>
@@ -36,7 +42,7 @@ export function Connect() {
           ))}*/}
       </div>
 
-      {error && <div>{error.message}</div>}
+      {/*{error && <div>{error.message}</div>}*/}
     </div>
   )
 }

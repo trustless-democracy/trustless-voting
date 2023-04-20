@@ -6,7 +6,9 @@ import {getSocialWalletOwner, getZeroDevSigner} from "@zerodevapp/sdk";
 import {BigNumber, Contract, ethers} from "ethers";
 import {SocialWallet} from "@zerodevapp/social-wallet";
 import {calculateMerkleRootAndZKProof, generateCommitment} from "zk-merkle-tree";
-import contracts from '../contracts.mumbai.json'
+import contracts from '../contracts.goerly.json'
+// import contracts from '../contracts.fuji.json'
+// import contracts from '../contracts.mumbai.json'
 // import contracts from '../contracts.polygon.json'
 import {useEffect, useState} from "react";
 import {ZeroDevSigner} from "@zerodevapp/sdk/dist/src/ZeroDevSigner";
@@ -85,10 +87,17 @@ function Page() {
             }
             console.log(`Commitment generated: ${commitment.commitment}`)
             const contract = getContract(signer)
-            const userIdentifier = ethers.utils.hashMessage(Math.random().toString()); console.log("Identifier: "+userIdentifier)
-            // const userIdentifier = address
+            let userIdentifier = address as string
+            const isLocal = location.hostname == "localhost"
+            if (isLocal) {
+                userIdentifier = ethers.utils.hashMessage(Math.random().toString())
+                console.log("Identifier: " + userIdentifier)
+            }
             console.log("Registering commitment...")
-            const tx = await contract.registerCommitment(userIdentifier, commitment.commitment)
+            const tx = await contract.registerCommitment(userIdentifier, commitment.commitment, {
+                maxFeePerGas: 2500000000000000,
+                maxPriorityFeePerGas: 2500000000000000
+            })
             console.log(`Transaction: ${tx.hash}`)
             const receipt = await tx.wait()
             console.log(`Receipt: ${JSON.stringify(receipt)}`)

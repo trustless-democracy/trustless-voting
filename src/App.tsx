@@ -9,7 +9,7 @@ function App() {
     React.useEffect(() => setMounted(true), [])
     return (
         <WagmiConfig client={client}>
-                <title>Trustless Voting</title>
+            <title>Trustless Voting</title>
             {mounted && <Page />}
         </WagmiConfig>
     )

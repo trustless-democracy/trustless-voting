@@ -18,14 +18,14 @@ import { publicProvider } from 'wagmi/providers/public'
 
 // export const projectId = 'b5486fa4-e3d9-450b-8428-646e757c10f6' // working
 // export const projectId = 'cdf82e89-40e8-49e4-8c74-724e0949ce3b' // Fuji (Avalance)
-export const projectId = '89fece6b-a511-4197-9c6f-dd206b83c301' // Mumbai
-// export const projectId = '5310f15b-ab99-49c4-af3b-5d719fd2788a' // Goerly
+// export const projectId = '89fece6b-a511-4197-9c6f-dd206b83c301' // Mumbai
+export const projectId = '5310f15b-ab99-49c4-af3b-5d719fd2788a' // Goerly
 // export const projectId = '52934819-2d69-48a5-ad26-648ff9cc7174' // Polygon
 
 const options = { options: { projectId } }
 
 const { chains, provider, webSocketProvider } = configureChains(
-  [mainnet, ...(process.env.NODE_ENV === 'development' ? [goerli] : [])],
+  [goerli],
   [
     publicProvider(),
   ],

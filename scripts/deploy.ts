@@ -22,7 +22,7 @@ async function main() {
     // add the 2nd hardhat account as a validator
     // await zktreevote.registerValidator(signers[1].address)
 
-    fs.writeFileSync("static/contracts.json", JSON.stringify({
+    fs.writeFileSync("src/contracts.json", JSON.stringify({
         mimc: mimcsponge.address,
         verifier: verifier.address,
         zktreevote: zktreevote.address
