@@ -5,18 +5,30 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "touch out/.nojekyll",
+    "deploy": "next build && next export && gh-pages -d out -t true"
   },
   "dependencies": {
     "@types/node": "18.16.0",
     "@types/react": "18.0.38",
     "@types/react-dom": "18.0.11",
+    "@zerodevapp/social-wallet": "^1.0.1",
+    "@zerodevapp/wagmi": "^1.0.19",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
+    "ethers": "^5.5.1",
     "next": "13.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "wagmi": "^0.12.12"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-define": "^2.1.0",
+    "gh-pages": "^5.0.0",
+    "sass": "^1.62.0"
   }
 }

@@ -1,0 +1,76 @@
+.ballot {
+  border: 1px solid gray;
+  /*background-color: #ececec;*/
+  width: 500px;
+  margin: 50px auto;
+}
+.title {
+  font-size: 150%;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.ballot .list {
+  margin: 75px;
+
+  label input:checked::before {
+    transform: scale(1);
+  }
+  label input::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: CanvasText;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+  input {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.05em solid currentColor;
+    border-radius: 1em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+
+  label {
+    --form-control-color: #11d90b;
+    font-family: system-ui, sans-serif;
+    font-size: 120%;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: .5em;
+    margin: 20px;
+  }
+
+
+}
+
+.img {
+  width: 300px;
+  margin: auto;
+  display: block;
+}
+
+.description {
+  text-align: center;
+  width: 500px;
+  margin: 50px auto;
+}
+
+.button {
+  display: block;
+  margin: 20px auto 100px;
+  padding: 10px 30px;
+}

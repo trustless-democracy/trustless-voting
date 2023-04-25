@@ -86,13 +86,14 @@ body {
 }
 
 body {
+
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /*background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb));*/
 }
 
 a {
@@ -104,4 +105,41 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+body {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+}
+
+li {
+  list-style-type: none
+}
+
+button {
+  border: 1px solid #0b5ed7;
+  padding: 7px 25px;
+  border-radius: 5px;
+  color: #0c63e4;
+  background-color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -2,3 +2,4 @@
 /* tslint:disable */
 /* eslint-disable */
 export * as counterContractSol from "./CounterContract.sol";
+export { TrustlessVoting__factory } from "./TrustlessVoting__factory";
