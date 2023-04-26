@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[987],{19978:function(n,u,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/submittion/Submittion",function(){return _(75647)}])}},function(n){n.O(0,[123,647,774,888,179],function(){return n(n.s=19978)}),_N_E=n.O()}]);
