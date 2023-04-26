@@ -7,7 +7,7 @@ contract TrustlessVoting is Ownable {
     mapping(uint => uint) public votesCounter;
     mapping(address => uint) public votes;
 
-    function vote(uint option) public {
+    function vote(uint option) external {
         require(votes[_msgSender()] == 0, "This address has already been voted");
         votes[_msgSender()] = option;
         votesCounter[option] = votesCounter[option] + 1;

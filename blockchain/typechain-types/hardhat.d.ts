@@ -20,21 +20,12 @@ declare module "hardhat/types/runtime" {
       name: "TrustlessVoting",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TrustlessVoting__factory>;
-    getContractFactory(
-      name: "TrustlessVoting",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.TrustlessVoting__factory>;
 
     getContractAt(
       name: "Ownable",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.Ownable>;
-    getContractAt(
-      name: "TrustlessVoting",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.TrustlessVoting>;
     getContractAt(
       name: "TrustlessVoting",
       address: string,

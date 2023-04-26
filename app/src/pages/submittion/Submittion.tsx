@@ -10,14 +10,11 @@ import address from '@/contract/address.mumbai.json'
 import { abi } from '@/contract/TrustlessVoting.json'
 import { TrustlessVoting } from '@/contract/TrustlessVoting'
 import {useEffect, useState} from "react";
-import Results from "@/pages/results";
 
 const Submittion = () => {
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(false)
-    const [rawResults, setRawResults] = useState<number[]>()
-    const [totalVoted, setTotalVoted] = useState<number>()
     const router = useRouter()
+    const [error, setError] = useState(false)
     const option = Number(router.query.option) || 1
 
     useEffect(() => { vote().then() }, [])
@@ -65,40 +62,19 @@ const Submittion = () => {
         }
     }
 
-    const getResults = async () => {
-        setLoading(true)
-        try {
-            const contract = await getContract(await getSigner())
-
-            const maxOption = Math.max(...projects.map(p => p.option))
-            const resultsBn = await contract.results(maxOption)
-            const results = resultsBn.map(bn => bn.toNumber())
-            console.log(JSON.stringify(results))
-            setRawResults(results)
-            setTotalVoted(results.reduce((sum, current) => sum + current, 0))
-        } catch (e: any) {
-            console.error(e)
-            alert("Undefined Error. Check console for logs or try again")
-        } finally {
-            setLoading(false)
-        }
-    }
-
     const results = async () => {
         router.push('/results')
     }
 
     return <>
-        { !rawResults && <>
-            <img className={css.img} src="img/basket.png"/>
-            <div className="description">
-                After submission no one can see your choice even you. Vote is anonymous.
+        <img className={css.img} src="img/basket.png"/>
+        <div className="description">
+            After submission no one can see your choice even you. Vote is anonymous.
 
-                Vote is counted. We do not store link between you and the vote of yours.
-            </div>
-        </>}
+            Vote is counted. We do not store link between you and the vote of yours.
+        </div>
 
-        { loading ? (<div className="loader" style={{ marginBottom: '100px'}}></div>) : rawResults ? <>
+        { loading ? (<div className="loader" style={{ marginBottom: '100px'}}></div>) : !error ? <>
             <button className={css.button} onClick={results}>
                 See results
             </button>

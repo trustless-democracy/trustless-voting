@@ -8,5 +8,5 @@ export type { contracts };
 export * as factories from "./factories";
 export type { Ownable } from "./@openzeppelin/contracts/access/Ownable";
 export { Ownable__factory } from "./factories/@openzeppelin/contracts/access/Ownable__factory";
-export type { TrustlessVoting } from "./contracts/CounterContract.sol/TrustlessVoting";
-export { TrustlessVoting__factory } from "./factories/contracts/CounterContract.sol/TrustlessVoting__factory";
+export type { TrustlessVoting } from "./contracts/TrustlessVoting";
+export { TrustlessVoting__factory } from "./factories/contracts/TrustlessVoting__factory";
