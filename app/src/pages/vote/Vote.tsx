@@ -38,7 +38,7 @@ const Vote = () => {
         </div>
 
         <img src="img/vote.png"  className={css.img}/>
-        <div className={css.description}>
+        <div className="description">
             Your vote will be securely cast to Voting Box. No one can know your choice, after you send ballot to the Voting Box. It is anonymous. Please agree and continue to voting.
         </div>
 

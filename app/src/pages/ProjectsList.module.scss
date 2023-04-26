@@ -36,3 +36,14 @@
     font-size: 90%;
     margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 600px){
+    .projectCart {
+        margin: 50px 0;
+        padding: 0px;
+        max-width: 100%;
+    }
+    .projectsList {
+        justify-content: center;
+    }
+}

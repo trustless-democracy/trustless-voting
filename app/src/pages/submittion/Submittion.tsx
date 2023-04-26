@@ -13,7 +13,6 @@ import {useEffect, useState} from "react";
 import Results from "@/pages/results";
 
 const Submittion = () => {
-    // const { isConnected, address } = useAccount()
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
     const [rawResults, setRawResults] = useState<number[]>()
@@ -48,7 +47,7 @@ const Submittion = () => {
             if (receipt.status == 1) {
                 // save local var
                 // router.push("/results")
-                await getResults()
+                // await getResults()
             }
         } catch (e: any) {
             if (e.error && e.error.error && e.error.error.message == 'execution reverted: This address has already been voted') {
@@ -86,13 +85,13 @@ const Submittion = () => {
     }
 
     const results = async () => {
-        // router.push('results')
+        router.push('/results')
     }
 
     return <>
         { !rawResults && <>
             <img className={css.img} src="img/basket.png"/>
-            <div className={css.description}>
+            <div className="description">
                 After submission no one can see your choice even you. Vote is anonymous.
 
                 Vote is counted. We do not store link between you and the vote of yours.
@@ -100,11 +99,11 @@ const Submittion = () => {
         </>}
 
         { loading ? (<div className="loader" style={{ marginBottom: '100px'}}></div>) : rawResults ? <>
-            {/*<button className={css.button} onClick={results}>
+            <button className={css.button} onClick={results}>
                 See results
-            </button>*/}
+            </button>
 
-            <div className={css.title}>Voting Results</div>
+            {/*<div className={css.title}>Voting Results</div>
             <div className={css.resultsList}>
                 { projects.map( p =>
                     <div key={p.option} className={css.resultRow}>
@@ -113,11 +112,11 @@ const Submittion = () => {
                     </div> )}
             </div>
 
-            <div className={css.description}>
+            <div className="description">
                 {totalVoted} people voted<br/>
                 Voting will end in 10 days
-            </div>
-        </> : <div className={css.description}>Error. Try again please</div>}
+            </div>*/}
+        </> : <div className="description">Error. Try again please</div>}
     </>
 }
 

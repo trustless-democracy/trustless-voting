@@ -119,6 +119,12 @@ li {
   list-style-type: none
 }
 
+.description {
+  text-align: center;
+  width: 500px;
+  margin: 50px auto;
+}
+
 button {
   border: 1px solid #0b5ed7;
   padding: 7px 25px;
@@ -142,4 +148,11 @@ button {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 600px){
+  .description {
+    width: 100%;
+    padding: 20px;
+  }
 }

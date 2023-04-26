@@ -1,5 +1,5 @@
 import css from "./Results.module.scss"
-import {useAccount} from "wagmi";
+import {useAccount, useProvider} from "wagmi";
 import {useRouter} from "next/router";
 import {projects} from "@/config";
 import {
@@ -14,9 +14,10 @@ import address from '@/contract/address.mumbai.json'
 import { abi } from '@/contract/TrustlessVoting.json'
 import { TrustlessVoting } from '@/contract/TrustlessVoting'
 import {useEffect, useState} from "react";
+import {publicProvider} from "wagmi/dist/providers/public";
 
 const Results = () => {
-    // const { isConnected, address } = useAccount()
+    const provider = useProvider()
     const [rawResults, setRawResults] = useState<number[]>([])
     const [loading, setLoading] = useState(true)
     const [totalVoted, setTotalVoted] = useState<number>()
@@ -24,21 +25,14 @@ const Results = () => {
 
     useEffect(() => { getResults().then() }, [])
 
-    async function getSigner() {
-        return await getZeroDevSigner({
-            projectId: zeroDevProjectId,
-            owner: await getSocialWalletOwner(zeroDevProjectId, new SocialWallet())
-        });
-    }
-
-    function getContract(signer: ZeroDevSigner) {
-        return new Contract(address.TrustlessVoting, abi, signer) as TrustlessVoting
+    function getContract() {
+        return new Contract(address.TrustlessVoting, abi, provider) as TrustlessVoting
     }
 
     const getResults = async () => {
         setLoading(true)
         try {
-            const contract = await getContract(await getSigner())
+            const contract = await getContract()
 
             const maxOption = Math.max(...projects.map(p => p.option))
             const resultsBn = await contract.results(maxOption)
@@ -55,7 +49,7 @@ const Results = () => {
     }
 
     return <>
-        { loading ? (<div className="loader" style={{ marginBottom: '100px'}}></div>) : <>
+        { loading ? (<div className="loader" style={{ marginTop: '100px'}}></div>) : <>
             <div className={css.title}>Voting Results</div>
             <div className={css.resultsList}>
                 { projects.map( p =>
@@ -65,7 +59,7 @@ const Results = () => {
                 </div> )}
             </div>
 
-            <div className={css.description}>
+            <div className="description">
                 {totalVoted} people voted<br/>
                 Voting will end in 10 days
             </div>

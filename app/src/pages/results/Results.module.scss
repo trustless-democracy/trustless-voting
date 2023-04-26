@@ -4,11 +4,6 @@
   text-align: center;
   margin: 50px auto;
 }
-.description {
-  text-align: center;
-  width: 500px;
-  margin: 50px auto;
-}
 .resultsList {
   text-align: center;
   width: 500px;
@@ -22,11 +17,25 @@
 }
 .number {
   padding-right: 20px;
-  width: 30%;
+  width: 20%;
   text-align: right;
 }
 .projectName {
   font-weight: 800;
   font-size: 16px;
   text-align: left;
+}
+
+@media only screen and (max-width: 600px){
+  .number {
+    width: 40px;
+  }
+  .resultRow {
+    padding-right: 20px;
+    width: 100%;
+  }
+  .resultsList {
+    padding: 0;
+    width: 100%;
+  }
 }
